@@ -10,13 +10,6 @@
         </groups>
         <classes>
             <class name="TestNGExample"/>
-            <class name="TestNGDataDrivenTest"/>
-        </classes>
-    </test>
-
-    <test name="TestNG Test 2">
-        <classes>
-            <class name="TestNGDependenciesTest"/>
         </classes>
     </test>
 </suite>
