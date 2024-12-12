@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="TestNG Suite" parallel="tests" thread-count="2">
+    <test name="TestNG Test 1">
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="TestNGExample"/>
+            <class name="TestNGDataDrivenTest"/>
+        </classes>
+    </test>
+
+    <test name="TestNG Test 2">
+        <classes>
+            <class name="TestNGDependenciesTest"/>
+        </classes>
+    </test>
+</suite>
