@@ -5,21 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44962bbe-5ec5-4997-8665-5679fc305bdb" name="Changes" comment="testngexample">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ParametrizedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNGDataDrivenTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNGDependenciesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Calculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ParametrizedTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestFactory.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TestNGExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNGExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="CodeInsightWorkspaceSettings">
-    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
@@ -64,14 +60,17 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "editor.preferences.import",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.&lt;default&gt;">
+  <component name="RunManager" selected="TestNG.TestNGExample">
     <configuration name="C:/Users/filip/AppData/Local/JetBrains/IntelliJIdea2022.3/temp-testng-customsuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="testng" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/../AppData/Local/JetBrains/IntelliJIdea2022.3/temp-testng-customsuite.xml" />
       <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestNGExample" />
+      <option name="METHOD_NAME" value="testDataDrivenInsertion" />
       <option name="TEST_OBJECT" value="SUITE" />
       <properties />
       <listeners />
@@ -101,12 +100,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestNGExample.testParameterizedDivision" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TestNGExample.testDataDrivenInsertion" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="testng" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/../AppData/Local/JetBrains/IntelliJIdea2022.3/temp-testng-customsuite.xml" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestNGExample" />
-      <option name="METHOD_NAME" value="testParameterizedDivision" />
+      <option name="METHOD_NAME" value="testDataDrivenInsertion" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -126,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestNGExample" />
+        <item itemvalue="TestNG.C:/Users/filip/AppData/Local/JetBrains/IntelliJIdea2022.3/temp-testng-customsuite.xml" />
+        <item itemvalue="TestNG.TestNGExample.testDataDrivenInsertion" />
         <item itemvalue="TestNG.&lt;default&gt;" />
         <item itemvalue="TestNG.C:/Users/filip/testng/testng.xml" />
-        <item itemvalue="TestNG.TestNGExample" />
-        <item itemvalue="TestNG.TestNGExample.testParameterizedDivision" />
-        <item itemvalue="TestNG.C:/Users/filip/AppData/Local/JetBrains/IntelliJIdea2022.3/temp-testng-customsuite.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -142,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733996771503</updated>
-      <workItem from="1733996772887" duration="4121000" />
+      <workItem from="1733996772887" duration="5933000" />
     </task>
     <task id="LOCAL-00001" summary="testngexample">
       <created>1733997281002</created>
@@ -156,6 +154,17 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testngexample" />
