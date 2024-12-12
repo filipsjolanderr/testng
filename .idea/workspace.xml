@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="44962bbe-5ec5-4997-8665-5679fc305bdb" name="Changes" comment="testngexample" />
+    <list default="true" id="44962bbe-5ec5-4997-8665-5679fc305bdb" name="Changes" comment="testngexample">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Calculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNGExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNGExample.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -84,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733996771503</updated>
-      <workItem from="1733996772887" duration="509000" />
+      <workItem from="1733996772887" duration="993000" />
     </task>
     <task id="LOCAL-00001" summary="testngexample">
       <created>1733997281002</created>
