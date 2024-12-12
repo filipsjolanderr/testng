@@ -76,6 +76,21 @@ public class TestNGExample {
         Assert.assertTrue(appleValues.contains(2), "Remaining value should be 2");
     }
 
+    @Test()
+    public void testRemoveAll() {
+        System.out.println("Running testRemoveAll");
+
+        treeListMultimap.put("apple", 1);
+        treeListMultimap.put("apple", 2);
+        treeListMultimap.put("pear", 2);
+
+        List<Integer> appleValues = treeListMultimap.removeAll("apple");
+        Assert.assertEquals(appleValues.size(), 2, "2 values associated with 'apple' should have been removed");
+        Integer appleSum = appleValues.get(0) + appleValues.get(1);
+        Assert.assertEquals(appleSum, 3, "The total sum of apples should be 3");
+        Assert.assertEquals(treeListMultimap.size(), 1, "One pear item should be left in the original map");
+    }
+
     @Test(dataProvider = "dataProviderExample", priority = 4)
     public void testDataDrivenInsertion(String scenario, String key, int value, int expectedSize) {
         System.out.println("Running testDataDrivenInsertion with data: " + scenario + " (" + key + ", " + value + ")");
