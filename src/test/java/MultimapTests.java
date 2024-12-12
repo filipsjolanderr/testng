@@ -7,10 +7,10 @@ import org.testng.annotations.*;
 import java.util.List;
 import java.util.Set;
 
-public class TestNGExample {
+public class MultimapTests {
 
-    private ListMultimap<String, Integer> treeListMultimap;
-    private ListMultimap<String, Integer> seperateTreeListMultimap;
+    private ListMultimap<String, Integer> multiMap;
+    private ListMultimap<String, Integer> separateMultiMap;
 
     @BeforeSuite
     public void beforeSuite() {
@@ -25,36 +25,36 @@ public class TestNGExample {
     @BeforeClass
     public void beforeClass() {
         System.out.println("Before Class - Building a ListMultimap instance.");
-        treeListMultimap = MultimapBuilder.treeKeys().arrayListValues().build();
-        seperateTreeListMultimap = MultimapBuilder.treeKeys().arrayListValues().build();
+        multiMap = MultimapBuilder.treeKeys().arrayListValues().build();
+        separateMultiMap = MultimapBuilder.treeKeys().arrayListValues().build();
     }
 
     @BeforeMethod
     public void beforeMethod() {
         System.out.println("Before Method - Clearing and reinitializing the multimap.");
-        treeListMultimap.clear();
+        multiMap.clear();
     }
 
     @Test(groups = {"smoke"}, priority = 1)
     public void testInsertionAndRetrieval() {
         System.out.println("Running testInsertionAndRetrieval (smoke)");
-        treeListMultimap.put("apple", 1);
-        treeListMultimap.put("apple", 2);
-        treeListMultimap.put("banana", 3);
+        multiMap.put("apple", 1);
+        multiMap.put("apple", 2);
+        multiMap.put("banana", 3);
 
-        Assert.assertEquals(treeListMultimap.get("apple").size(), 2, "Expected 2 values for key 'apple'");
-        Assert.assertEquals(treeListMultimap.get("banana").size(), 1, "Expected 1 value for key 'banana'");
-        Assert.assertTrue(treeListMultimap.get("apple").contains(2), "Expected value 2 to be associated with 'apple'");
+        Assert.assertEquals(multiMap.get("apple").size(), 2, "Expected 2 values for key 'apple'");
+        Assert.assertEquals(multiMap.get("banana").size(), 1, "Expected 1 value for key 'banana'");
+        Assert.assertTrue(multiMap.get("apple").contains(2), "Expected value 2 to be associated with 'apple'");
     }
 
     @Test(groups = {"regression"}, priority = 2)
     public void testKeyOrdering() {
         System.out.println("Running testKeyOrdering (regression)");
-        treeListMultimap.put("zebra", 10);
-        treeListMultimap.put("apple", 1);
-        treeListMultimap.put("mango", 5);
+        multiMap.put("zebra", 10);
+        multiMap.put("apple", 1);
+        multiMap.put("mango", 5);
 
-        Set<String> keys = treeListMultimap.keySet();
+        Set<String> keys = multiMap.keySet();
         // Since it's a tree-based key structure, keys should be sorted alphabetically: apple, mango, zebra
         Assert.assertEquals(keys.size(), 3);
         Assert.assertTrue(keys.toString().equals("[apple, mango, zebra]"),
@@ -64,14 +64,14 @@ public class TestNGExample {
     @Test(dependsOnMethods = {"testKeyOrdering"}, priority = 3)
     public void testRemoval() {
         System.out.println("Running testRemoval (depends on testKeyOrdering)");
-        treeListMultimap.put("apple", 1);
-        treeListMultimap.put("apple", 2);
+        multiMap.put("apple", 1);
+        multiMap.put("apple", 2);
 
         // Remove a single value
-        boolean removed = treeListMultimap.remove("apple", 1);
+        boolean removed = multiMap.remove("apple", 1);
         Assert.assertTrue(removed, "Expected to remove one value from 'apple' key");
 
-        List<Integer> appleValues = treeListMultimap.get("apple");
+        List<Integer> appleValues = multiMap.get("apple");
         Assert.assertEquals(appleValues.size(), 1, "Now only one value should remain associated with 'apple'");
         Assert.assertTrue(appleValues.contains(2), "Remaining value should be 2");
     }
@@ -80,22 +80,22 @@ public class TestNGExample {
     public void testRemoveAll() {
         System.out.println("Running testRemoveAll");
 
-        treeListMultimap.put("apple", 1);
-        treeListMultimap.put("apple", 2);
-        treeListMultimap.put("pear", 2);
+        multiMap.put("apple", 1);
+        multiMap.put("apple", 2);
+        multiMap.put("pear", 2);
 
-        List<Integer> appleValues = treeListMultimap.removeAll("apple");
+        List<Integer> appleValues = multiMap.removeAll("apple");
         Assert.assertEquals(appleValues.size(), 2, "2 values associated with 'apple' should have been removed");
         Integer appleSum = appleValues.get(0) + appleValues.get(1);
         Assert.assertEquals(appleSum, 3, "The total sum of apples should be 3");
-        Assert.assertEquals(treeListMultimap.size(), 1, "One pear item should be left in the original map");
+        Assert.assertEquals(multiMap.size(), 1, "One pear item should be left in the original map");
     }
 
     @Test(dataProvider = "dataProviderExample", priority = 4)
     public void testDataDrivenInsertion(String scenario, String key, int value, int expectedSize) {
         System.out.println("Running testDataDrivenInsertion with data: " + scenario + " (" + key + ", " + value + ")");
-        seperateTreeListMultimap.put(key, value);
-        Assert.assertEquals(seperateTreeListMultimap.get(key).size(), expectedSize,
+        separateMultiMap.put(key, value);
+        Assert.assertEquals(separateMultiMap.get(key).size(), expectedSize,
                 "Size of values for key '" + key + "' should match expected value");
     }
 
@@ -113,8 +113,8 @@ public class TestNGExample {
     public void testMultipleInvocations() {
         System.out.println("Running testMultipleInvocations in parallel");
         // Just a concurrency demonstration: insert concurrently and check size
-        treeListMultimap.put("parallel", 100);
-        Assert.assertTrue(treeListMultimap.get("parallel").contains(100));
+        multiMap.put("parallel", 100);
+        Assert.assertTrue(multiMap.get("parallel").contains(100));
     }
 
     // Conditionally skip a test
@@ -136,7 +136,7 @@ public class TestNGExample {
     @AfterClass
     public void afterClass() {
         System.out.println("After Class - Clearing the multimap instance resources.");
-        treeListMultimap = null;
+        multiMap = null;
     }
 
     @AfterTest

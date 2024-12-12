@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="44962bbe-5ec5-4997-8665-5679fc305bdb" name="Changes" comment="testngexample">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Calculator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ParametrizedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TestNGExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TestNGExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TestNGExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MultimapTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testng.xml" beforeDir="false" afterPath="$PROJECT_DIR$/testng.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +62,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.TestNGExample">
+  <component name="RunManager">
     <configuration name="C:/Users/filip/AppData/Local/JetBrains/IntelliJIdea2022.3/temp-testng-customsuite.xml" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="testng" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/../AppData/Local/JetBrains/IntelliJIdea2022.3/temp-testng-customsuite.xml" />
@@ -78,21 +76,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="C:/Users/filip/testng/testng.xml" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="testng" />
-      <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
-      <option name="TEST_OBJECT" value="SUITE" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestNGExample" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MultimapTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="testng" />
       <option name="SUITE_NAME" value="$PROJECT_DIR$/testng.xml" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestNGExample" />
+      <option name="MAIN_CLASS_NAME" value="MultimapTests" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -100,11 +88,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestNGExample.testDataDrivenInsertion" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="MultimapTests.testDataDrivenInsertion" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="testng" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestNGExample" />
+      <option name="MAIN_CLASS_NAME" value="MultimapTests" />
       <option name="METHOD_NAME" value="testDataDrivenInsertion" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultimapTests.testMultipleInvocations" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testng" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MultimapTests" />
+      <option name="METHOD_NAME" value="testMultipleInvocations" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -124,11 +124,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TestNGExample" />
+        <item itemvalue="TestNG.MultimapTests.testMultipleInvocations" />
+        <item itemvalue="TestNG.MultimapTests" />
         <item itemvalue="TestNG.C:/Users/filip/AppData/Local/JetBrains/IntelliJIdea2022.3/temp-testng-customsuite.xml" />
-        <item itemvalue="TestNG.TestNGExample.testDataDrivenInsertion" />
+        <item itemvalue="TestNG.MultimapTests.testDataDrivenInsertion" />
         <item itemvalue="TestNG.&lt;default&gt;" />
-        <item itemvalue="TestNG.C:/Users/filip/testng/testng.xml" />
       </list>
     </recent_temporary>
   </component>
@@ -140,7 +140,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733996771503</updated>
-      <workItem from="1733996772887" duration="5933000" />
+      <workItem from="1733996772887" duration="9740000" />
     </task>
     <task id="LOCAL-00001" summary="testngexample">
       <created>1733997281002</created>
@@ -169,6 +169,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testngexample" />
     <option name="LAST_COMMIT_MESSAGE" value="testngexample" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/MultimapTests.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/testng$_default_.ic" NAME="&lt;default&gt; Coverage Results" MODIFIED="1733998314810" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
